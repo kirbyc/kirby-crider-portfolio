@@ -31,7 +31,7 @@ const Index = () => {
         </h1>
         <nav className="flex gap-6 animate-fade-up" style={{ animationDelay: "200ms" }}>
           <a href="#multimedia" className="nav-link">
-            Multimedia Projects
+            Multimedia
           </a>
           <a href="#elearning" className="nav-link">
             E-Learning
