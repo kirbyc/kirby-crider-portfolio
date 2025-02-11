@@ -2,10 +2,10 @@
 export const projects = {
   multimedia: [
     {
-      title: "Digital Art Gallery",
+      title: "Cybersecurity Motion Graphic",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      description: "Interactive virtual gallery showcasing digital artworks",
-      points: ["3D visualization", "WebGL rendering", "Real-time interactions"],
+      description: "Built with a team of animators, and diving into After Effects myself for many of the segments myself, this video was intended to help government agency staff understand how cybersecurity impacts their work.",
+      points: ["Creative and participatory project management", "Translating complex technical topics into quickly understandable content", "Real-time interactionsAfter Effects + Premiere Pro + Sharepoint collaboration"],
     },
     {
       title: "Music Visualizer",
