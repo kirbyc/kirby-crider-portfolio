@@ -16,7 +16,7 @@ const Footer = () => {
             <h2 className="section-heading">Connect</h2>
             <div className="space-y-6">
               <p className="text-muted-foreground">
-                Let's connect and discuss your next project. Follow me on social media or send me a message!
+                Want to see what I'm up to? Follow me on social media!
               </p>
               <div className="flex gap-6">
                 <a
@@ -55,7 +55,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="pt-8 text-sm text-muted-foreground">
-                <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Kirby Crider. All rights reserved.</p>
               </div>
             </div>
           </div>
