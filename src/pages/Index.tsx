@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import ProjectSection from "@/components/ProjectSection";
 import Footer from "@/components/Footer";
