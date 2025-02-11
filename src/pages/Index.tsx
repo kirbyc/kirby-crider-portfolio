@@ -28,7 +28,8 @@ const Index = () => {
         <h1 className="text-6xl md:text-7xl font-mono font-bold mb-8 animate-fade-up">
           Welcome to my Portfolio
         </h1>
-        <h2>Kirby Crider, Learning Designer and Facilitator</h2>
+        <h2 className="text-3xl md:text-4xl font-mono font-bold mb-6 animate-fade-up text-retro-pink bg-retro-blue px-4 py-2 rounded-lg border-2 border-retro-yellow">
+          Kirby Crider, Learning Designer and Facilitator</h2>
         <nav className="flex gap-6 animate-fade-up" style={{ animationDelay: "200ms" }}>
           <a href="#multimedia" className="nav-link">
             Multimedia
