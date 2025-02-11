@@ -9,14 +9,15 @@ interface Project {
 }
 
 interface ProjectSectionProps {
+  id?: string; // Added id as an optional prop
   title: string;
   projects: Project[];
   className?: string;
 }
 
-const ProjectSection = ({ title, projects, className = "" }: ProjectSectionProps) => {
+const ProjectSection = ({ id, title, projects, className = "" }: ProjectSectionProps) => {
   return (
-    <section className={`py-24 ${className}`}>
+    <section id={id} className={`py-24 ${className}`}>
       <div className="container mx-auto">
         <h2 className="section-heading">{title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
