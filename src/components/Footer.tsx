@@ -20,7 +20,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-6">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/kirbyc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -29,16 +29,7 @@ const Footer = () => {
                   <span className="sr-only">GitHub</span>
                 </a>
                 <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Twitter className="w-6 h-6" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-                <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/kirbycrider/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -47,7 +38,7 @@ const Footer = () => {
                   <span className="sr-only">LinkedIn</span>
                 </a>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:kirby.crider@gmail.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Mail className="w-6 h-6" />
