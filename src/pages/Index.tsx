@@ -1,123 +1,8 @@
-import { useEffect } from "react";
-import { ArrowRight, Github, Twitter, Linkedin, Mail } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
 
-const projects = {
-  multimedia: [
-    {
-      title: "Digital Art Gallery",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      description: "Interactive virtual gallery showcasing digital artworks",
-      points: ["3D visualization", "WebGL rendering", "Real-time interactions"],
-    },
-    {
-      title: "Music Visualizer",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      description: "Real-time audio visualization platform",
-      points: ["Audio analysis", "Dynamic visuals", "Custom algorithms"],
-    },
-    {
-      title: "Motion Graphics",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      description: "Animated graphics for digital platforms",
-      points: ["2D animation", "Visual effects", "Brand storytelling"],
-    },
-    {
-      title: "Interactive Installation",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      description: "Public space digital art installation",
-      points: ["Sensor integration", "Responsive design", "Public engagement"],
-    },
-    {
-      title: "Video Production",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      description: "Professional video production services",
-      points: ["4K filming", "Color grading", "Audio mixing"],
-    },
-    {
-      title: "AR Experience",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      description: "Augmented reality mobile application",
-      points: ["3D tracking", "Interactive elements", "Mobile optimization"],
-    },
-  ],
-  elearning: [
-    {
-      title: "Online Course Platform",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      description: "Comprehensive e-learning management system",
-      points: ["Course creation", "Student tracking", "Assessment tools"],
-    },
-    {
-      title: "Interactive Tutorials",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      description: "Step-by-step interactive learning guides",
-      points: ["Progress tracking", "Immediate feedback", "Adaptive learning"],
-    },
-    {
-      title: "Virtual Classroom",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      description: "Real-time virtual learning environment",
-      points: ["Live streaming", "Chat integration", "Resource sharing"],
-    },
-    {
-      title: "Mobile Learning App",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      description: "Educational mobile application development",
-      points: ["Offline access", "Progress sync", "Interactive exercises"],
-    },
-    {
-      title: "Training Simulations",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      description: "Virtual training and simulation programs",
-      points: ["Scenario-based", "Performance tracking", "Real-time feedback"],
-    },
-    {
-      title: "Learning Analytics",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      description: "Educational data analysis platform",
-      points: ["Performance metrics", "Learning patterns", "Custom reports"],
-    },
-  ],
-  facilitation: [
-    {
-      title: "Workshop Design",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      description: "Custom workshop development and planning",
-      points: ["Needs assessment", "Content creation", "Activity design"],
-    },
-    {
-      title: "Team Building",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      description: "Corporate team building programs",
-      points: ["Group dynamics", "Leadership skills", "Collaboration tools"],
-    },
-    {
-      title: "Strategic Planning",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      description: "Facilitated strategic planning sessions",
-      points: ["Goal setting", "Action planning", "Progress monitoring"],
-    },
-    {
-      title: "Change Management",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      description: "Organizational change facilitation",
-      points: ["Change strategy", "Stakeholder engagement", "Implementation support"],
-    },
-    {
-      title: "Group Coaching",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      description: "Professional group coaching services",
-      points: ["Skill development", "Peer learning", "Performance improvement"],
-    },
-    {
-      title: "Process Design",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      description: "Business process improvement facilitation",
-      points: ["Process mapping", "Efficiency analysis", "Implementation planning"],
-    },
-  ],
-};
+import { useEffect } from "react";
+import ProjectSection from "@/components/ProjectSection";
+import Footer from "@/components/Footer";
+import { projects } from "@/data/projects";
 
 const Index = () => {
   useEffect(() => {
@@ -157,160 +42,26 @@ const Index = () => {
         </nav>
       </section>
 
-      <section id="multimedia" className="py-24 bg-white">
-        <div className="container mx-auto">
-          <h2 className="section-heading">Multimedia Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.multimedia.map((project, index) => (
-              <div
-                key={project.title}
-                className="project-card"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                  loading="lazy"
-                />
-                <h3 className="text-xl font-mono font-bold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
-                <ul className="space-y-2">
-                  {project.points.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-sm">
-                      <ArrowRight className="w-4 h-4" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProjectSection
+        id="multimedia"
+        title="Multimedia Projects"
+        projects={projects.multimedia}
+        className="bg-white"
+      />
+      <ProjectSection
+        id="elearning"
+        title="E-Learning"
+        projects={projects.elearning}
+        className="bg-secondary/30"
+      />
+      <ProjectSection
+        id="facilitation"
+        title="Facilitation Services"
+        projects={projects.facilitation}
+        className="bg-white"
+      />
 
-      <section id="elearning" className="py-24 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="section-heading">E-Learning</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.elearning.map((project, index) => (
-              <div
-                key={project.title}
-                className="project-card"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                  loading="lazy"
-                />
-                <h3 className="text-xl font-mono font-bold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
-                <ul className="space-y-2">
-                  {project.points.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-sm">
-                      <ArrowRight className="w-4 h-4" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="facilitation" className="py-24 bg-white">
-        <div className="container mx-auto">
-          <h2 className="section-heading">Facilitation Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.facilitation.map((project, index) => (
-              <div
-                key={project.title}
-                className="project-card"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                  loading="lazy"
-                />
-                <h3 className="text-xl font-mono font-bold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
-                <ul className="space-y-2">
-                  {project.points.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-sm">
-                      <ArrowRight className="w-4 h-4" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <footer className="py-24 bg-secondary">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h2 className="section-heading">Get in Touch</h2>
-              <ContactForm />
-            </div>
-
-            <div>
-              <h2 className="section-heading">Connect</h2>
-              <div className="space-y-6">
-                <p className="text-muted-foreground">
-                  Let's connect and discuss your next project. Follow me on social media or send me a message!
-                </p>
-                <div className="flex gap-6">
-                  <a
-                    href="https://github.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Github className="w-6 h-6" />
-                    <span className="sr-only">GitHub</span>
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Twitter className="w-6 h-6" />
-                    <span className="sr-only">Twitter</span>
-                  </a>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Linkedin className="w-6 h-6" />
-                    <span className="sr-only">LinkedIn</span>
-                  </a>
-                  <a
-                    href="mailto:hello@example.com"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Mail className="w-6 h-6" />
-                    <span className="sr-only">Email</span>
-                  </a>
-                </div>
-                <div className="pt-8 text-sm text-muted-foreground">
-                  <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
