@@ -26,7 +26,7 @@ const Index = () => {
     <div className="min-h-screen bg-secondary/30">
       <section className="container mx-auto pt-24 pb-16">
         <h1 className="text-6xl md:text-7xl font-mono font-bold mb-8 animate-fade-up">
-          Welcome to my Portfolio
+          Portfolio
         </h1>
         <h2 className="text-3xl md:text-4xl font-mono font-bold mb-6 animate-fade-up">
           Kirby Crider  |  Learning Designer and Facilitator</h2>
