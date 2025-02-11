@@ -1,4 +1,4 @@
-
+m
 import { useEffect } from "react";
 import ProjectSection from "@/components/ProjectSection";
 import Footer from "@/components/Footer";
@@ -27,7 +27,7 @@ const Index = () => {
     <div className="min-h-screen bg-secondary/30">
       <section className="container mx-auto pt-24 pb-16">
         <h1 className="text-6xl md:text-7xl font-mono font-bold mb-8 animate-fade-up">
-          Portfolio
+          Welcome to my Portfolio | Kirby Crider, Learning Designer and Facilitator
         </h1>
         <nav className="flex gap-6 animate-fade-up" style={{ animationDelay: "200ms" }}>
           <a href="#multimedia" className="nav-link">
