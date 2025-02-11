@@ -44,7 +44,7 @@ const Index = () => {
 
       <ProjectSection
         id="multimedia"
-        title="Multimedia Projects"
+        title="Multimedia"
         projects={projects.multimedia}
         className="bg-white"
       />
